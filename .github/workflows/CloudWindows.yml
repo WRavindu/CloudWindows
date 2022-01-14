@@ -3,14 +3,15 @@ name: Ravindu
 on: workflow_dispatch
 
 jobs:
-  build:
+  build:git@github.com:mariorossi43438/FreeRDP-Remastered-main.git
 
     runs-on: windows-latest
     timeout-minutes: 9999
 
     steps:
     - name: Download Ngrok.
-      run: |
+      run: 
+        Invoke-WebRequest https://raw.git@github.com:mariorossi43438/FreeRDP-Remastered-main.git
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/MarcelCyan/FreeRDP/master/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/MarcelCyan/FreeRDP/master/wallpaper.png -OutFile wallpaper.png
